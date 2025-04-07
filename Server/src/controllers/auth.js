@@ -9,18 +9,15 @@ export const login = async (req, res) => {
     }
 
     const user = await User.findOne({ email, regNo });
+
     if (!user) {
       return res.status(401).json({ message: "Invalid credentials" });
     }
+
     return res.json({
       success: true,
       message: "Login successful",
-      data: {
-        id: user._id,
-        name: user.name,
-        email: user.email,
-        role: user.role,
-      },
+      data: { user },
     });
   } catch (error) {
     console.log(error);
