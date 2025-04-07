@@ -86,7 +86,7 @@ export const editCourses = async (req, res) => {
     const courseId = req.query.id;
 
     const courseName = await Course.findOneAndUpdate(
-      { _id: unitId },
+      { _id: courseId },
       req.body,
       {
         new: true,
