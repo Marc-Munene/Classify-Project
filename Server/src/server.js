@@ -13,7 +13,7 @@ import { courseUnitRouter } from "./routes/courseUnitRoute.js";
 import { userCourseRouter } from "./routes/userCourseRoute.js";
 import { userUnitRouter } from "./routes/userUnitRoute.js";
 import { authRouter } from "./routes/authRoute.js";
-
+import { sessionRouter } from "./routes/sessionRoute.js";
 
 const app = express();
 
@@ -45,6 +45,7 @@ app.use(
   "/api",
   authRouter,
   userRouter,
+  sessionRouter,
   buildingRouter,
   courseRouter,
   courseUnitRouter,

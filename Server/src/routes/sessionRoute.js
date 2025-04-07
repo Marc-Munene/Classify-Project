@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { postSession } from "../controllers/session.js";
+import { getSessions, postSession } from "../controllers/session.js";
 
 const sessionRouter = Router();
 
-sessionRouter.route("/session").get().post(postSession);
+sessionRouter.route("/session").get(getSessions).post(postSession);
 
 export { sessionRouter };
