@@ -12,7 +12,8 @@ import { classRouter } from "./routes/classRouter.js";
 import { courseUnitRouter } from "./routes/courseUnitRoute.js";
 import { userCourseRouter } from "./routes/userCourseRoute.js";
 import { userUnitRouter } from "./routes/userUnitRoute.js";
-import { authRouter } from "./routes/auth.js";
+import { authRouter } from "./routes/authRoute.js";
+
 
 const app = express();
 
