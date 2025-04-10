@@ -7,9 +7,9 @@ import { CgLogOut } from "react-icons/cg";
 const App = () => {
   return (
     <div className="min-h-screen">
-      <div className="flex text-primary">
+      <div className="flex text-primary mt-5">
         {/* Navigation side bar */}
-        <nav className="aside w-1/5 space-y-5">
+        <nav className="aside w-1/5 space-y-5 cursor-pointer">
           <div className="flex items-center justify-around py-3">
             <span className="font-semibold">Classes</span>
             <SiGoogleclassroom />
@@ -34,11 +34,23 @@ const App = () => {
 
         {/* Main content */}
         <div className="w-full ">
-          <div className="flex relative justify-between items-center mt-5 pr-10">
-            <h1 className="font-bold text-3xl text-center flex-grow tracking-wide">
+          <div className="flex relative justify-between items-center pr-10 ">
+            <h1 className="font-bold text-3xl text-center flex-grow tracking-wide ">
               Find Vacant rooms
             </h1>
-            <CgProfile />
+            <span className="mr-2">Your profile</span>
+            <CgProfile className="cursor-pointer" size={30} />
+          </div>
+          <div className="flex justify-center items-center mt-4">
+            <input
+              autofocus
+              type="text"
+              className="border-black placeholder-black shadow-md px-5 py-4 rounded-lg w-[37%]"
+              placeholder="Search for classes.."
+            />
+            <button className="ml-5 bg-btn p-3 text-white rounded-lg hover:bg-primary cursor-pointer">
+              Search
+            </button>
           </div>
         </div>
       </div>
