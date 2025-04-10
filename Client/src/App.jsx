@@ -8,6 +8,8 @@ const App = () => {
   return (
     <div className="min-h-screen">
       <div className="flex">
+
+        {/* Navigation side bar */}
         <nav className="aside w-1/5 space-y-5">
           <div className="flex items-center justify-around py-3">
             <span className="font-semibold">Classes</span>
