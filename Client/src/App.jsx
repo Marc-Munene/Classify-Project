@@ -7,8 +7,7 @@ import { CgLogOut } from "react-icons/cg";
 const App = () => {
   return (
     <div className="min-h-screen">
-      <div className="flex">
-
+      <div className="flex text-primary">
         {/* Navigation side bar */}
         <nav className="aside w-1/5 space-y-5">
           <div className="flex items-center justify-around py-3">
@@ -32,13 +31,15 @@ const App = () => {
             <CgLogOut />
           </div>
         </nav>
-        <div className="header flex ">
-          <h1>Find Vacant Classrooms</h1>
-          <CgProfile />
-        </div>
-        <div className="search-bar">
-          <input type="text" placeholder="Search for classes" />
-          <button>Search</button>
+
+        {/* Main content */}
+        <div className="w-full ">
+          <div className="flex relative justify-between items-center mt-5 pr-10">
+            <h1 className="font-bold text-3xl text-center flex-grow tracking-wide">
+              Find Vacant rooms
+            </h1>
+            <CgProfile />
+          </div>
         </div>
       </div>
     </div>
