@@ -6,36 +6,38 @@ import { FaHistory } from "react-icons/fa";
 import { CgLogOut } from "react-icons/cg";
 const App = () => {
   return (
-    <div>
-      <div className="aside">
-        <div>
-          <span>Classes</span>
-          <SiGoogleclassroom />
+    <div className="min-h-screen">
+      <div className="flex">
+        <nav className="aside w-1/5 space-y-5">
+          <div className="flex items-center justify-around py-3">
+            <span className="font-semibold">Classes</span>
+            <SiGoogleclassroom />
+          </div>
+          <div className="flex items-center justify-around py-3">
+            <span className="font-semibold">Your Bookings</span>
+            <CiBookmarkCheck />
+          </div>
+          <div className="flex items-center justify-around py-3">
+            <span className="font-semibold">Booked</span>
+            <FaBookReader />
+          </div>
+          <div className="flex items-center justify-around py-3">
+            <span className="font-semibold">History</span>
+            <FaHistory />
+          </div>
+          <div className="flex items-center justify-around py-3">
+            <span className="font-semibold">Logout</span>
+            <CgLogOut />
+          </div>
+        </nav>
+        <div className="header flex ">
+          <h1>Find Vacant Classrooms</h1>
+          <CgProfile />
         </div>
-        <div>
-          <span>Your Bookings</span>
-          <CiBookmarkCheck />
+        <div className="search-bar">
+          <input type="text" placeholder="Search for classes" />
+          <button>Search</button>
         </div>
-        <div>
-          <span>Booked</span>
-          <FaBookReader />
-        </div>
-        <div>
-          <span>History</span>
-          <FaHistory />
-        </div>
-        <div>
-          <span>Logout</span>
-          <CgLogOut />
-        </div>
-      </div>
-      <div className="header">
-        <h1>Find Vacant Classrooms</h1>
-        <CgProfile />
-      </div>
-      <div className="search-bar">
-        <input type="text" placeholder="Search for classes" />
-        <button>Search</button>
       </div>
     </div>
   );
