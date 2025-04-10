@@ -44,6 +44,7 @@ const App = () => {
             <span className="mr-2">Your profile</span>
             <CgProfile className="cursor-pointer" size={30} />
           </div>
+
           <div className="flex justify-center items-center mt-4">
             <input
               autoFocus
@@ -54,6 +55,19 @@ const App = () => {
             <button className="ml-5 bg-btn p-3 text-white rounded-lg hover:bg-primary cursor-pointer">
               Search
             </button>
+          </div>
+
+          <div>
+            <table className="w-full text-left mt-5">
+              <thead>
+                <tr>
+                  <th>ROOM</th>
+                  <th>BUILDING</th>
+                  <th>STATUS</th>
+                  <th>ACTION</th>
+                </tr>
+              </thead>
+            </table>
           </div>
         </div>
       </div>
