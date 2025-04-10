@@ -11,7 +11,7 @@ const App = () => {
         {/* Navigation side bar */}
         <nav className="aside w-1/5 space-y-5 cursor-pointer">
           <div>
-            <img src="/public/Blue logo.png" alt="" />
+            <img src="/src/assets/Blue logo.png" alt="" />
           </div>
           <div className="flex items-center justify-around py-3">
             <span className="font-semibold text-2xl">Classes</span>
