@@ -10,25 +10,28 @@ const App = () => {
       <div className="flex text-primary mt-5">
         {/* Navigation side bar */}
         <nav className="aside w-1/5 space-y-5 cursor-pointer">
-          <div className="flex items-center justify-around py-3">
-            <span className="font-semibold">Classes</span>
-            <SiGoogleclassroom />
+          <div>
+            <img src="/public/Blue logo.png" alt="" />
           </div>
           <div className="flex items-center justify-around py-3">
-            <span className="font-semibold">Your Bookings</span>
-            <CiBookmarkCheck />
+            <span className="font-semibold text-2xl">Classes</span>
+            <SiGoogleclassroom size={30} />
           </div>
           <div className="flex items-center justify-around py-3">
-            <span className="font-semibold">Booked</span>
-            <FaBookReader />
+            <span className="font-semibold text-2xl">Bookings</span>
+            <CiBookmarkCheck size={30} />
           </div>
           <div className="flex items-center justify-around py-3">
-            <span className="font-semibold">History</span>
-            <FaHistory />
+            <span className="font-semibold text-2xl">Booked</span>
+            <FaBookReader size={30} />
           </div>
           <div className="flex items-center justify-around py-3">
-            <span className="font-semibold">Logout</span>
-            <CgLogOut />
+            <span className="font-semibold text-2xl">History</span>
+            <FaHistory size={30} />
+          </div>
+          <div className="flex items-center justify-around py-3 mt-5">
+            <span className="font-semibold text-2xl">Logout</span>
+            <CgLogOut size={30} />
           </div>
         </nav>
 
@@ -43,9 +46,9 @@ const App = () => {
           </div>
           <div className="flex justify-center items-center mt-4">
             <input
-              autofocus
+              autoFocus
               type="text"
-              className="border-black placeholder-black shadow-md px-5 py-4 rounded-lg w-[37%]"
+              className="border-black placeholder-black shadow-lg px-5 py-4 rounded-lg w-[37%]"
               placeholder="Search for classes.."
             />
             <button className="ml-5 bg-btn p-3 text-white rounded-lg hover:bg-primary cursor-pointer">
