@@ -2,7 +2,7 @@ import { CgProfile, CgLogOut } from "react-icons/cg";
 import { SiGoogleclassroom } from "react-icons/si";
 import { CiBookmarkCheck } from "react-icons/ci";
 import { FaBookReader, FaHistory } from "react-icons/fa";
-import { useState } from "react"; // For mobile menu toggle
+import { useState } from "react"; //  mobile menu toggle
 
 const App = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -28,7 +28,7 @@ const App = () => {
         >
           <div className="p-4">
             <img
-              src="/src/assets/Blue logo.png"
+              src="/white-logo.png"
               alt="Classify Logo"
               className="w-3/4 mx-auto md:w-full"
             />
