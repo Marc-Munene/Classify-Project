@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Mobile Menu Button (only shows on small screens) */}
+      {/* Mobile Menu Button */}
       <button
         className="md:hidden fixed top-4 left-4 z-50 p-2 bg-primary text-white rounded"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
@@ -33,6 +33,28 @@ const App = () => {
               className="w-3/4 mx-auto md:w-full"
             />
           </div>
+          {/* 
+          <div className="flex items-center justify-around py-3">
+            <span className="font-semibold text-2xl">Classes</span>
+            <SiGoogleclassroom size={30} />
+          </div>
+          <div className="flex items-center justify-around py-3">
+            <span className="font-semibold text-2xl">Bookings</span>
+            <CiBookmarkCheck size={30} />
+          </div>
+          <div className="flex items-center justify-around py-3">
+            <span className="font-semibold text-2xl">Booked</span>
+            <FaBookReader size={30} />
+          </div>
+          <div className="flex items-center justify-around py-3">
+            <span className="font-semibold text-2xl">History</span>
+            <FaHistory size={30} />
+          </div>
+          <div className="flex items-center justify-around py-3 mt-5">
+            <span className="font-semibold text-2xl">Logout</span>
+            <CgLogOut size={30} />
+          </div>
+           */}
 
           {/* Navigation Items */}
           {[
@@ -45,7 +67,7 @@ const App = () => {
             <div
               key={index}
               className={`flex items-center p-4 hover:bg-gray-100 ${
-                item.isLast ? "mt-8" : ""
+                item.isLast ? "mt-8 text-red-500" : ""
               }`}
             >
               <span className="font-semibold text-lg md:text-xl flex-grow">
@@ -61,7 +83,7 @@ const App = () => {
           {/* Header */}
           <div className="flex flex-col md:flex-row items-center justify-between p-4 md:pr-10">
             <h1 className="font-bold text-xl sm:text-2xl md:text-3xl text-center md:text-left mb-4 md:mb-0 w-full md:w-auto">
-              Find Vacant rooms
+              Find Vacant Rooms
             </h1>
             <div className="flex items-center">
               <span className="hidden sm:inline mr-2 text-sm md:text-base">
@@ -87,7 +109,7 @@ const App = () => {
           {/* Table */}
           <div className="overflow-x-auto p-4">
             <table className="w-full text-left">
-              <thead className="bg-gray-100">
+              <thead className="bg-gray-200">
                 <tr>
                   <th className="p-3">ROOM</th>
                   <th className="p-3 hidden sm:table-cell">BUILDING</th>
