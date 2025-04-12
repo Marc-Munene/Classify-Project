@@ -3,4 +3,12 @@
 @theme{
     --color-primary: #004aad;
     --color-btn: #003366;
+
+    @keyframes pulse {
+        60% {
+          opacity: 0.6;
+        }
+      }
+
+      
 }

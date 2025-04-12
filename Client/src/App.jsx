@@ -30,7 +30,7 @@ const App = () => {
             <img
               src="/white-logo.png"
               alt="Classify Logo"
-              className="w-3/4 mx-auto md:w-full"
+              className="w-3/4 mx-auto md:w-full animate-pulse"
             />
           </div>
           {/* 
@@ -41,7 +41,7 @@ const App = () => {
           <div className="flex items-center justify-around py-3">
             <span className="font-semibold text-2xl">Bookings</span>
             <CiBookmarkCheck size={30} />
-          </div>
+          </div> 
           <div className="flex items-center justify-around py-3">
             <span className="font-semibold text-2xl">Booked</span>
             <FaBookReader size={30} />
@@ -66,7 +66,7 @@ const App = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className={`flex items-center p-4 hover:bg-gray-100 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] rounded-lg ${
+              className={`flex items-center p-4 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] rounded-lg  ${
                 item.isLast ? "mt-8 text-red-500" : ""
               }`}
             >
@@ -82,7 +82,7 @@ const App = () => {
         <div className="w-full md:w-4/5 pl-0 md:pl-4">
           {/* Header */}
           <div className="flex flex-col md:flex-row items-center justify-between p-4 md:pr-10">
-            <h1 className="font-bold text-xl sm:text-2xl md:text-3xl text-center md:text-left mb-4 md:mb-0 w-full md:w-auto">
+            <h1 className="font-bold text-xl sm:text-2xl md:text-3xl text-center md:text-left mb-4 md:mb-0 w-full md:w-auto ">
               Find Vacant Rooms
             </h1>
             <div className="flex items-center">
@@ -114,7 +114,7 @@ const App = () => {
                   <th className="p-3  hover:bg-primary hover:text-white">
                     ROOM
                   </th>
-                  <th className="p-3  hover:bg-primary hover:text-white">
+                  <th className="p-3 sm:table-cell hover:bg-primary hover:text-white">
                     BUILDING
                   </th>
                   <th className="p-3  hover:bg-primary hover:text-white">
