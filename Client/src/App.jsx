@@ -1,5 +1,6 @@
 import SideBar from "./components/SideBar";
 import { Classes } from "./Pages/protected/Classes";
+
 // import { CgProfile } from "react-icons/cg";
 
 const App = () => {

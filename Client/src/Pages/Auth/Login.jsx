@@ -1,4 +1,3 @@
-import React from "react";
 import { LogInForm } from "../../components/LogInForm";
 
 const Login = () => {
@@ -9,4 +8,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export { Login };
