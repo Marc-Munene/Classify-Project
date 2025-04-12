@@ -2,7 +2,7 @@ import { CgProfile, CgLogOut } from "react-icons/cg";
 import { SiGoogleclassroom } from "react-icons/si";
 import { CiBookmarkCheck } from "react-icons/ci";
 import { FaBookReader, FaHistory } from "react-icons/fa";
-import { useState } from "react"; //  mobile menu toggle
+import { useState } from "react"; // For mobile menu toggle
 
 const App = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -66,7 +66,7 @@ const App = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className={`flex items-center p-4 hover:bg-gray-100 ${
+              className={`flex items-center p-4 hover:bg-gray-100 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] rounded-lg ${
                 item.isLast ? "mt-8 text-red-500" : ""
               }`}
             >
@@ -101,20 +101,28 @@ const App = () => {
               className="border border-black placeholder-black shadow-lg px-4 py-3 rounded-lg w-full sm:w-2/3 md:w-[37%]"
               placeholder="Search for classes.."
             />
-            <button className="mt-3 sm:mt-0 sm:ml-4 bg-btn p-3 text-white rounded-lg hover:bg-primary cursor-pointer w-full sm:w-auto px-6">
+            <button className="mt-3 sm:mt-0 sm:ml-4 bg-btn p-3 w-[40%] hover:text-white text-white rounded-lg hover:bg-primary cursor-pointer  sm:w-auto px-6">
               Search
             </button>
           </div>
 
           {/* Table */}
           <div className="overflow-x-auto p-4">
-            <table className="w-full text-left">
+            <table className="w-full text-left text-base">
               <thead className="bg-gray-200">
                 <tr>
-                  <th className="p-3">ROOM</th>
-                  <th className="p-3 hidden sm:table-cell">BUILDING</th>
-                  <th className="p-3">STATUS</th>
-                  <th className="p-3">ACTION</th>
+                  <th className="p-3  hover:bg-primary hover:text-white">
+                    ROOM
+                  </th>
+                  <th className="p-3  hover:bg-primary hover:text-white">
+                    BUILDING
+                  </th>
+                  <th className="p-3  hover:bg-primary hover:text-white">
+                    STATUS
+                  </th>
+                  <th className="p-3  hover:bg-primary hover:text-white">
+                    ACTION
+                  </th>
                 </tr>
               </thead>
               <tbody>{/* Your table data will go here */}</tbody>
