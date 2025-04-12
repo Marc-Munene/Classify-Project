@@ -1,6 +1,14 @@
+import { useState } from "react";
 import { CgProfile } from "react-icons/cg";
+import { Modal } from "../../components/Modal";
+import { FormModal } from "../../components/FormModal";
 
 const Classes = () => {
+  const [modal, setModal] = useState(false);
+
+  const closeModal = () => {
+    setModal(false);
+  };
   return (
     <>
       {/* Main/Classes Content */}
@@ -51,10 +59,29 @@ const Classes = () => {
                 </th>
               </tr>
             </thead>
-            <tbody>{/* Your table data will go here */}</tbody>
+            <tbody>
+              {/* hard coded tbody */}
+              {/* remove all, map from database */}
+              <tr>
+                <td>SPA 101</td>
+                <td>NEW COHRED</td>
+                <td>Vacant</td>
+                <td>
+                  <button
+                    className="bg-red-500 text-white px-3 pl-2 mt-2 rounded cursor-pointer"
+                    onClick={() => setModal(true)}
+                  >
+                    BOOK
+                  </button>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
+      <Modal openModal={modal} closeModal={closeModal}>
+        <FormModal />
+      </Modal>
     </>
   );
 };

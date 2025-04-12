@@ -32,29 +32,35 @@ const SideBar = () => {
           />
         </NavLink>
 
-        <NavLink to={"/"} className="flex items-center justify-around py-3">
+        <NavLink
+          to={"/"}
+          className="flex items-center justify-around py-3 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] "
+        >
           <span className="font-semibold text-2xl">Classes</span>
           <SiGoogleclassroom size={30} />
         </NavLink>
         <NavLink
           to={"/bookings"}
-          className="flex items-center justify-around py-3"
+          className="flex items-center justify-around py-3 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] "
         >
           <span className="font-semibold text-2xl">Bookings</span>
           <CiBookmarkCheck size={30} />
         </NavLink>
         <NavLink
           to={"/booked"}
-          className="flex items-center justify-around py-3"
+          className="flex items-center justify-around py-3 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] "
         >
           <span className="font-semibold text-2xl">Booked</span>
           <FaBookReader size={30} />
         </NavLink>
-        <NavLink to={"/history"} className="flex items-center justify-around py-3">
+        <NavLink
+          to={"/history"}
+          className="flex items-center justify-around py-3 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] "
+        >
           <span className="font-semibold text-2xl">History</span>
           <FaHistory size={30} />
         </NavLink>
-        <NavLink className="flex items-center justify-around py-3 mt-5  text-red-500">
+        <NavLink className="flex items-center justify-around py-3 mt-5 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06]  text-red-500">
           <span className="font-semibold text-2xl ">Logout</span>
           <CgLogOut size={30} />
         </NavLink>
