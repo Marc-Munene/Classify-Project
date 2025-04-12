@@ -15,7 +15,7 @@ const Classes = () => {
               Your profile
             </span>
 
-            <CgProfile className="cursor-pointer" size={24} />
+            <CgProfile className="cursor-pointer animate-bounce" size={24} />
           </div>
         </div>
 
@@ -27,7 +27,7 @@ const Classes = () => {
             className="border border-black placeholder-black shadow-lg px-4 py-3 rounded-lg w-full sm:w-2/3 md:w-[37%]"
             placeholder="Search for classes.."
           />
-          <button className="mt-3 sm:mt-0 sm:ml-4 bg-btn p-3 w-[40%] hover:text-white text-white rounded-lg hover:bg-primary cursor-pointer  sm:w-auto px-6">
+          <button className="mt-3 sm:mt-0 sm:ml-4 bg-btn p-3 w-[40%] hover:text-white text-white rounded-lg hover:bg-primary cursor-pointer sm:w-auto px-6 ">
             Search
           </button>
         </div>

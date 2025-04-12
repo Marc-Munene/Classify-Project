@@ -3,19 +3,20 @@ import { CgLogOut } from "react-icons/cg";
 import { SiGoogleclassroom } from "react-icons/si";
 import { CiBookmarkCheck } from "react-icons/ci";
 import { FaBookReader, FaHistory } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const SideBar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
     <>
-    {/* Mobile Menu Button */}
-    <button
+      {/* Mobile Menu Button */}
+      <button
         className="md:hidden fixed top-4 left-4 z-50 p-2 bg-primary text-white rounded"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
       >
         ☰
       </button>
-     {/* Navigation Sidebar - Hidden on mobile unless toggled */}
+      {/* Navigation Sidebar - Hidden on mobile unless toggled */}
       <nav
         className={`aside bg-white fixed md:static inset-y-0 left-0 z-40 w-64 md:w-1/5 transform ${
           showMobileMenu
@@ -23,38 +24,43 @@ const SideBar = () => {
             : "-translate-x-full md:translate-x-0"
         } transition-transform duration-300 ease-in-out shadow-lg md:shadow-none`}
       >
-        <div className="p-4">
+        <NavLink to={"/"} className="p-4">
           <img
             src="/white-logo.png"
             alt="Classify Logo"
             className="w-3/4 mx-auto md:w-full animate-pulse"
           />
-        </div>
-        {/* 
-              <div className="flex items-center justify-around py-3">
-                <span className="font-semibold text-2xl">Classes</span>
-                <SiGoogleclassroom size={30} />
-              </div>
-              <div className="flex items-center justify-around py-3">
-                <span className="font-semibold text-2xl">Bookings</span>
-                <CiBookmarkCheck size={30} />
-              </div> 
-              <div className="flex items-center justify-around py-3">
-                <span className="font-semibold text-2xl">Booked</span>
-                <FaBookReader size={30} />
-              </div>
-              <div className="flex items-center justify-around py-3">
-                <span className="font-semibold text-2xl">History</span>
-                <FaHistory size={30} />
-              </div>
-              <div className="flex items-center justify-around py-3 mt-5">
-                <span className="font-semibold text-2xl">Logout</span>
-                <CgLogOut size={30} />
-              </div>
-               */}
+        </NavLink>
+
+        <NavLink to={"/"} className="flex items-center justify-around py-3">
+          <span className="font-semibold text-2xl">Classes</span>
+          <SiGoogleclassroom size={30} />
+        </NavLink>
+        <NavLink
+          to={"/bookings"}
+          className="flex items-center justify-around py-3"
+        >
+          <span className="font-semibold text-2xl">Bookings</span>
+          <CiBookmarkCheck size={30} />
+        </NavLink>
+        <NavLink
+          to={"/booked"}
+          className="flex items-center justify-around py-3"
+        >
+          <span className="font-semibold text-2xl">Booked</span>
+          <FaBookReader size={30} />
+        </NavLink>
+        <NavLink to={"/history"} className="flex items-center justify-around py-3">
+          <span className="font-semibold text-2xl">History</span>
+          <FaHistory size={30} />
+        </NavLink>
+        <NavLink className="flex items-center justify-around py-3 mt-5  text-red-500">
+          <span className="font-semibold text-2xl ">Logout</span>
+          <CgLogOut size={30} />
+        </NavLink>
 
         {/* Navigation Items */}
-        {[
+        {/* {[
           { text: "Classes", icon: <SiGoogleclassroom size={24} /> },
           { text: "Bookings", icon: <CiBookmarkCheck size={24} /> },
           { text: "Booked", icon: <FaBookReader size={24} /> },
@@ -72,10 +78,10 @@ const SideBar = () => {
             </span>
             {item.icon}
           </div>
-        ))}
+        ))} */}
       </nav>
     </>
   );
 };
 
-export default SideBar;
+export { SideBar };

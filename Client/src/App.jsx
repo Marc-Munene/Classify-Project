@@ -1,5 +1,6 @@
-import SideBar from "./components/SideBar";
-import { Classes } from "./Pages/protected/Classes";
+import { Outlet } from "react-router-dom";
+import { SideBar } from "./components/SideBar";
+// import { Classes } from "./Pages/protected/Classes";
 
 // import { CgProfile } from "react-icons/cg";
 
@@ -11,7 +12,8 @@ const App = () => {
       <div className="flex flex-col md:flex-row text-primary mt-5 md:mt-0">
         <SideBar />
 
-        <Classes />
+        {/* <Classes /> */}
+        <Outlet />
       </div>
     </div>
   );
