@@ -111,16 +111,16 @@ const App = () => {
             <table className="w-full text-left text-base">
               <thead className="bg-gray-200">
                 <tr>
-                  <th className="p-3  hover:bg-primary hover:text-white">
+                  <th className="p-3  hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
                     ROOM
                   </th>
-                  <th className="p-3 sm:table-cell hover:bg-primary hover:text-white">
+                  <th className="p-3 sm:table-cell hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
                     BUILDING
                   </th>
-                  <th className="p-3  hover:bg-primary hover:text-white">
+                  <th className="p-3  hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
                     STATUS
                   </th>
-                  <th className="p-3  hover:bg-primary hover:text-white">
+                  <th className="p-3  hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
                     ACTION
                   </th>
                 </tr>
