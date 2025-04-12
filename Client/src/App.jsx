@@ -114,7 +114,7 @@ const App = () => {
                   <th className="p-3  hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
                     ROOM
                   </th>
-                  <th className="p-3 sm:table-cell hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
+                  <th className="p-3 hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
                     BUILDING
                   </th>
                   <th className="p-3  hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
