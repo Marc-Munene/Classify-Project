@@ -3,6 +3,7 @@ import { CgProfile } from "react-icons/cg";
 const Classes = () => {
   return (
     <>
+      {/* Main/Classes Content */}
       <div className="w-full md:w-4/5 pl-0 md:pl-4">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-center justify-between p-4 md:pr-10">

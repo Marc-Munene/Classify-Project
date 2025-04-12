@@ -8,6 +8,14 @@ const SideBar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
     <>
+    {/* Mobile Menu Button */}
+    <button
+        className="md:hidden fixed top-4 left-4 z-50 p-2 bg-primary text-white rounded"
+        onClick={() => setShowMobileMenu(!showMobileMenu)}
+      >
+        ☰
+      </button>
+     {/* Navigation Sidebar - Hidden on mobile unless toggled */}
       <nav
         className={`aside bg-white fixed md:static inset-y-0 left-0 z-40 w-64 md:w-1/5 transform ${
           showMobileMenu
