@@ -68,7 +68,7 @@ const Classes = () => {
               {/* remove all, map from database */}
               <tr>
                 <td>SPA 101</td>
-                <td>NEW COHRED</td>
+                <td className="text-sm md:text-xl">NEW COHRED</td>
                 <td>55</td>
                 <td>Vacant</td>
                 <td>
