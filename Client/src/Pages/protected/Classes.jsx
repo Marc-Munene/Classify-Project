@@ -41,7 +41,7 @@ const Classes = () => {
         </div>
 
         {/* Table */}
-        <div className="p-4">
+        <div className="p-4 ">
           <table className="w-full text-left text-base overflow-hidden">
             <thead className="bg-gray-200">
               <tr>
