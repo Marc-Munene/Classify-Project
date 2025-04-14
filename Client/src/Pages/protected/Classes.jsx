@@ -66,14 +66,16 @@ const Classes = () => {
             <tbody>
               {/* hard coded tbody */}
               {/* remove all, map from database */}
-              <tr>
-                <td>SPA 101</td>
-                <td className="text-sm md:text-xl">NEW COHRED</td>
-                <td>55</td>
-                <td>Vacant</td>
-                <td>
+              <tr className="border-b border-gray-300">
+                <td className="px-3 py-2 sm:py-3">SPA 101</td>
+                <td className="px-3 py-2 sm:py-3 text-sm ">
+                  NEW COHRED
+                </td>
+                <td className="px-3 py-2 sm:py-3">55</td>
+                <td className="px-3 py-2 sm:py-3">Vacant</td>
+                <td className="px-3 py-2 sm:py-3">
                   <button
-                    className="bg-red-500 text-white px-3 pl-2 mt-2 rounded cursor-pointer mr-5"
+                    className="bg-red-500 text-white px-3 py-1 rounded cursor-pointer hover:bg-red-600 transition-colors duration-200"
                     onClick={() => setModal(true)}
                   >
                     BOOK
