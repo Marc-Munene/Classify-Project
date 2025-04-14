@@ -7,6 +7,10 @@ import { NavLink } from "react-router-dom";
 
 const SideBar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const closeMobileMenu = () => {
+    setShowMobileMenu(false);
+  };
   return (
     <>
       {/* Mobile Menu Button */}
@@ -24,7 +28,7 @@ const SideBar = () => {
             : "-translate-x-full md:translate-x-0"
         } transition-transform duration-300 ease-in-out shadow-lg md:shadow-none`}
       >
-        <NavLink to={"/"} className="p-4">
+        <NavLink to={"/"} className="p-4" onClick={closeMobileMenu}>
           <img
             src="/white-logo.png"
             alt="Classify Logo"
@@ -35,32 +39,43 @@ const SideBar = () => {
         <NavLink
           to={"/"}
           className="flex items-center justify-around py-3 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] "
+          onClick={closeMobileMenu}
         >
           <span className="font-semibold text-2xl">Classes</span>
           <SiGoogleclassroom size={30} />
         </NavLink>
+        
         <NavLink
           to={"/bookings"}
           className="flex items-center justify-around py-3 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] "
+          onClick={closeMobileMenu}
         >
           <span className="font-semibold text-2xl">Bookings</span>
           <CiBookmarkCheck size={30} />
         </NavLink>
+
         <NavLink
           to={"/booked"}
           className="flex items-center justify-around py-3 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] "
+          onClick={closeMobileMenu}
         >
           <span className="font-semibold text-2xl">Booked</span>
           <FaBookReader size={30} />
         </NavLink>
+
         <NavLink
           to={"/history"}
           className="flex items-center justify-around py-3 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] "
+          onClick={closeMobileMenu}
         >
           <span className="font-semibold text-2xl">History</span>
           <FaHistory size={30} />
         </NavLink>
-        <NavLink className="flex items-center justify-around py-3 mt-5 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06]  text-red-500">
+
+        <NavLink
+          className="flex items-center justify-around py-3 mt-5 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06]  text-red-500"
+          onClick={closeMobileMenu}
+        >
           <span className="font-semibold text-2xl ">Logout</span>
           <CgLogOut size={30} />
         </NavLink>
