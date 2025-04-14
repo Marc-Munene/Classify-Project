@@ -28,6 +28,7 @@ const SideBar = () => {
             : "-translate-x-full md:translate-x-0"
         } transition-transform duration-300 ease-in-out shadow-lg md:shadow-none`}
       >
+        {/* logo link */}
         <NavLink to={"/"} className="p-4" onClick={closeMobileMenu}>
           <img
             src="/white-logo.png"
@@ -36,6 +37,7 @@ const SideBar = () => {
           />
         </NavLink>
 
+        {/* classes link */}
         <NavLink
           to={"/"}
           className="flex items-center justify-around py-3 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] "
@@ -44,7 +46,8 @@ const SideBar = () => {
           <span className="font-semibold text-2xl">Classes</span>
           <SiGoogleclassroom size={30} />
         </NavLink>
-        
+
+        {/* bookings link */}
         <NavLink
           to={"/bookings"}
           className="flex items-center justify-around py-3 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] "
@@ -54,6 +57,7 @@ const SideBar = () => {
           <CiBookmarkCheck size={30} />
         </NavLink>
 
+        {/* booked link */}
         <NavLink
           to={"/booked"}
           className="flex items-center justify-around py-3 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] "
@@ -63,6 +67,7 @@ const SideBar = () => {
           <FaBookReader size={30} />
         </NavLink>
 
+        {/*  history link*/}
         <NavLink
           to={"/history"}
           className="flex items-center justify-around py-3 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06] "
@@ -72,6 +77,7 @@ const SideBar = () => {
           <FaHistory size={30} />
         </NavLink>
 
+        {/* logout */}
         <NavLink
           className="flex items-center justify-around py-3 mt-5 hover:bg-gray-200 transform transform-fill duration-300 ease-in-out hover:scale-[1.06]  text-red-500"
           onClick={closeMobileMenu}
