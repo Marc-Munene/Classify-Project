@@ -51,6 +51,10 @@ const Classes = () => {
                 <th className="p-3 hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
                   BUILDING
                 </th>
+                <th className="p-3 hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
+                  CAPACITY
+                </th>
+
                 <th className="p-3  hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
                   STATUS
                 </th>
@@ -65,10 +69,11 @@ const Classes = () => {
               <tr>
                 <td>SPA 101</td>
                 <td>NEW COHRED</td>
+                <td>55</td>
                 <td>Vacant</td>
                 <td>
                   <button
-                    className="bg-red-500 text-white px-3 pl-2 mt-2 rounded cursor-pointer"
+                    className="bg-red-500 text-white px-3 pl-2 mt-2 rounded cursor-pointer mr-5"
                     onClick={() => setModal(true)}
                   >
                     BOOK
