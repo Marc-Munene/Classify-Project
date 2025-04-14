@@ -1,6 +1,6 @@
 const Bookings = () => {
   return (
-    <div className=" p-3 w-full md:w-4/5 ">
+    <div className=" p-4 w-full md:w-4/5 ">
       <div className="mb-10">
         <h1 className="font-bold text-xl sm:text-2xl md:text-3xl text-center md:text-left mb-4 md:mb-0 w-full md:w-auto">
           Your Bookings
