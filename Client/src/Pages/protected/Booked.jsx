@@ -16,14 +16,14 @@ const Booked = () => {
               BUILDING
             </th>
             <th className="p-3 hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
-              UNIT
+              TIME END
             </th>
 
             <th className="p-3  hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
-              TIME START
+              CLASS REP
             </th>
             <th className="p-3  hover:bg-primary hover:text-white transform transform-fill duration-300 ease-in-out hover:scale-[1.06] ">
-              TIME FINISH
+              UNIT
             </th>
           </tr>
         </thead>
@@ -33,9 +33,9 @@ const Booked = () => {
           <tr className="border-b border-gray-300 ">
             <td className="px-3 py-2 sm:py-3">SPA 101</td>
             <td className="px-3 py-2 sm:py-3 text-sm ">NEW COHRED</td>
-            <td className="px-3 py-2 sm:py-3">Psychology</td>
-            <td className="px-3 py-2 sm:py-3">10:30am</td>
             <td className="px-3 py-2 sm:py-3">12:30pm</td>
+            <td className="px-3 py-2 sm:py-3">MUNENE</td>
+            <td className="px-3 py-2 sm:py-3">Psychology</td>
           </tr>
         </tbody>
       </table>
