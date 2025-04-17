@@ -55,11 +55,11 @@ const Classes = () => {
           <table className="w-full text-left text-base overflow-hidden">
             <thead className="bg-gray-200">
               <tr>
-                <th className="p-3 text-sm md:text-xl">ROOM</th>
-                <th className="p-3 text-sm md:text-xl">BUILDING</th>
-                <th className="p-3 text-sm md:text-xl">CPTY</th>
-                <th className="p-3 text-sm md:text-xl">STATUS</th>
-                <th className="p-3 text-sm md:text-xl">ACTION</th>
+                <th className="p-3 text-sm md:text-xl text-center">ROOM</th>
+                <th className="p-3 text-sm md:text-xl text-center">BUILDING</th>
+                <th className="p-3 text-sm md:text-xl text-center">CPTY</th>
+                <th className="p-3 text-sm md:text-xl text-center">STATUS</th>
+                <th className="p-3 text-sm md:text-xl text-center">ACTION</th>
               </tr>
             </thead>
             <tbody>
@@ -67,13 +67,17 @@ const Classes = () => {
               {/* remove all, map from database */}
               {classes.map((element, i) => (
                 <tr className="border-b border-gray-300" key={i}>
-                  <td className="py-3">{element.name}</td>
-                  <td className="py-3">{element.building.name}</td>
-                  <td className="py-3">{element.capacity}</td>
-                  <td className="py-3 text-green-500">{element.status} </td>
-                  <td>
+                  <td className="py-3 text-center">{element.name}</td>
+                  <td className="py-3 text-center">{element.building.name}</td>
+                  <td className="py-3 text-center">{element.capacity}</td>
+                  <td className="text-center">
+                    <button className="bg-green-400 text-base md:text-xl font-medium px-3 py-1 rounded">
+                      {element.status}
+                    </button>
+                  </td>
+                  <td className="py-3 text-center">
                     <button
-                      className="bg-red-500 text-white px-3 py-1 rounded cursor-pointer hover:bg-red-600 transition-colors duration-200"
+                      className="bg-red-500 text-white  px-3 py-1 rounded cursor-pointer hover:bg-red-600 transition-colors duration-200"
                       onClick={() => setModal(true)}
                     >
                       BOOK
