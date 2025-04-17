@@ -14,6 +14,7 @@ import { userCourseRouter } from "./routes/userCourseRoute.js";
 import { userUnitRouter } from "./routes/userUnitRoute.js";
 import { authRouter } from "./routes/authRoute.js";
 import { sessionRouter } from "./routes/sessionRoute.js";
+import { bookingRouter } from "./routes/bookingRoute.js";
 
 const app = express();
 
@@ -47,6 +48,7 @@ app.use(
   userRouter,
   sessionRouter,
   buildingRouter,
+  bookingRouter,
   courseRouter,
   courseUnitRouter,
   userCourseRouter,

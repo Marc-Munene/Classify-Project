@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { addBookings } from "../controllers/bookings";
+import { addBookings } from "../controllers/bookings.js";
 
 const bookingRouter = Router();
 
-bookingRouter.post(addBookings);
+bookingRouter.route("/bookings").post(addBookings);
 
 export { bookingRouter };
