@@ -70,7 +70,7 @@ const Classes = () => {
                   <td className="py-3">{element.name}</td>
                   <td className="py-3">{element.building.name}</td>
                   <td className="py-3">{element.capacity}</td>
-                  <td className="py-3">{element.status} </td>
+                  <td className="py-3 text-green-500">{element.status} </td>
                   <td>
                     <button
                       className="bg-red-500 text-white px-3 py-1 rounded cursor-pointer hover:bg-red-600 transition-colors duration-200"

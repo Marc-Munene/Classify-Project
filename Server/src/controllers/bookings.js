@@ -18,6 +18,7 @@ export const addBookings = async (req, res) => {
       timeEnd,
     });
 
+    //handle class status to changed to booked
     return res.status(201).json({
       success: true,
       message: "Booking created successfully",
