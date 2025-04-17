@@ -1,5 +1,5 @@
 const FormModal = () => {
-  return <div>This is the form modal</div>;
+  return <div></div>;
 };
 
 export { FormModal };

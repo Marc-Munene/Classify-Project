@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { Modal } from "../../components/Modal";
 import { FormModal } from "../../components/FormModal";
+import { useClassStore } from "../../store/ClassStore";
 
 const Classes = () => {
   const [modal, setModal] = useState(false);
+
+  //Hook
+  const { classData, classes } = useClassStore();
+
+  useEffect(() => {
+    classData();
+  }, []);
+
+  console.log(classes);
 
   const closeModal = () => {
     setModal(false);
@@ -55,20 +65,22 @@ const Classes = () => {
             <tbody>
               {/* hard coded tbody */}
               {/* remove all, map from database */}
-              <tr className="border-b border-gray-300">
-                <td className="px-3 py-2 sm:py-3">SPA 101</td>
-                <td className="px-3 py-2 sm:py-3 text-sm ">NEW COHRED</td>
-                <td className="px-3 py-2 sm:py-3">55</td>
-                <td className="px-3 py-2 sm:py-3">Vacant</td>
-                <td className="px-3 py-2 sm:py-3">
-                  <button
-                    className="bg-red-500 text-white px-3 py-1 rounded cursor-pointer hover:bg-red-600 transition-colors duration-200"
-                    onClick={() => setModal(true)}
-                  >
-                    BOOK
-                  </button>
-                </td>
-              </tr>
+              {classes.map((element, i) => (
+                <tr className="border-b border-gray-300" key={i}>
+                  <td className="py-3">{element.name}</td>
+                  <td className="py-3">{element.building.name}</td>
+                  <td className="py-3">{element.capacity}</td>
+                  <td className="py-3">{element.status} </td>
+                  <td>
+                    <button
+                      className="bg-red-500 text-white px-3 py-1 rounded cursor-pointer hover:bg-red-600 transition-colors duration-200"
+                      onClick={() => setModal(true)}
+                    >
+                      BOOK
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
