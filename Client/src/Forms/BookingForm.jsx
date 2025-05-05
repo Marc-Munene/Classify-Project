@@ -6,14 +6,29 @@ const BookingForm = ({ closeModal }) => {
   const [timeStart, setTimeStart] = useState("");
   const [timeEnd, setTimeEnd] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-        
+      const payload = {
+        unit,
+        timeStart,
+        timeEnd,
+      };
+
+      const response = await fetch(
+        `${import.meta.env.VITE_SERVER}/api/bookings`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify(payload),
+        }
+      );
     } catch (error) {
-        toast.error("Booking Failed!")
-        
+      toast.error("Booking Failed!");
     }
     closeModal();
   };
