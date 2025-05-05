@@ -11,7 +11,9 @@ const BookingForm = ({ closeModal }) => {
 
     try {
       const payload = {
-        unit,
+        buildingId,
+        classId,
+        unit: unitName,
         timeStart,
         timeEnd,
       };
@@ -27,10 +29,16 @@ const BookingForm = ({ closeModal }) => {
           body: JSON.stringify(payload),
         }
       );
+
+      if (!response.ok) {
+        throw new Error("Failed to book a class!");
+      }
+
+      toast.success("Class Booked Successfully!");
+      closeModal();
     } catch (error) {
       toast.error("Booking Failed!");
     }
-    closeModal();
   };
 
   return (

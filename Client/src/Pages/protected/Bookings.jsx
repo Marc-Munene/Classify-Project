@@ -3,13 +3,10 @@ import { useBookingsStore } from "../../store/Bookings";
 
 const Bookings = () => {
   const { bookingsData, bookings } = useBookingsStore();
-  
 
   useEffect(() => {
     bookingsData();
   }, []);
-
-
 
   return (
     <div className=" p-4 w-full md:w-4/5 ">
@@ -32,13 +29,15 @@ const Bookings = () => {
         <tbody>
           {/* hard coded tbody */}
           {/* remove all, map from database */}
-          <tr className="border-b border-gray-300 ">
-            <td className="px-3 py-2 sm:py-3">SPA 101</td>
-            <td className="px-3 py-2 sm:py-3 text-sm ">NEW COHRED</td>
-            <td className="px-3 py-2 sm:py-3">DBMS</td>
-            <td className="px-3 py-2 sm:py-3">10:30am</td>
-            <td className="px-3 py-2 sm:py-3">12:30pm</td>
-          </tr>
+          {bookings.map((element, i) => (
+            <tr className="border-b border-gray-300" key={i}>
+              <td className="px-3 py-2 sm:py-3">{element.classId.name}</td>
+              <td className="px-3 py-2 sm:py-3">{element.buildingId.name}</td>
+              <td className="px-3 py-2 sm:py-3">{element.unit}</td>
+              <td className="px-3 py-2 sm:py-3">{element.timeStart}</td>
+              <td className="px-3 py-2 sm:py-3">{element.timeEnd}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
