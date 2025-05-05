@@ -1,7 +1,20 @@
+import { useState } from "react";
+import { toast } from "react-toastify";
+
 const BookingForm = ({ closeModal }) => {
+  const [unitName, setUnitName] = useState("");
+  const [timeStart, setTimeStart] = useState("");
+  const [timeEnd, setTimeEnd] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted");
+
+    try {
+        
+    } catch (error) {
+        toast.error("Booking Failed!")
+        
+    }
     closeModal();
   };
 
@@ -29,6 +42,8 @@ const BookingForm = ({ closeModal }) => {
             id="unit"
             className="w-full px-3 py-2 border border-gray-300 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter unit name"
+            value={unitName}
+            onChange={(e) => setUnitName(e.target.value)}
             autoFocus
             required
           />
@@ -45,6 +60,8 @@ const BookingForm = ({ closeModal }) => {
             type="time"
             id="timeStart"
             className="w-full px-3 py-2 border border-gray-300 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={timeStart}
+            onChange={(e) => setTimeStart(e.target.value)}
             required
           />
         </div>
@@ -60,6 +77,8 @@ const BookingForm = ({ closeModal }) => {
             type="time"
             id="timeEnd"
             className="w-full px-3 py-2 border border-gray-300 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={timeEnd}
+            onChange={(e) => setTimeEnd(e.target.value)}
             required
           />
         </div>

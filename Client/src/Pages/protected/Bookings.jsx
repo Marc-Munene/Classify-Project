@@ -1,4 +1,16 @@
+import { useEffect } from "react";
+import { useBookingsStore } from "../../store/Bookings";
+
 const Bookings = () => {
+  const { bookingsData, bookings } = useBookingsStore();
+  
+
+  useEffect(() => {
+    bookingsData();
+  }, []);
+
+
+
   return (
     <div className=" p-4 w-full md:w-4/5 ">
       <div className="mb-10">

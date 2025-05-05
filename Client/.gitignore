@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 
+.env
+
 FirstCode.jsx
 
 # Editor directories and files

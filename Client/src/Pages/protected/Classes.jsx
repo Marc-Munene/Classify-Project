@@ -40,14 +40,11 @@ const Classes = () => {
         {/* Search Bar */}
         <div className="flex flex-col sm:flex-row justify-center items-center p-4">
           <input
-            autoFocus
             type="text"
-            className="border border-black placeholder-black shadow-lg px-4 py-3 rounded-lg w-full sm:w-2/3 md:w-[37%]"
-            placeholder="Search for classes.."
+            className="border rounded-full shadow-md sm:shadow-xl py-2 px-6 w-72 sm:w-100 placeholder:text-gray-700 text-sm sm:text-base"
+            placeholder="Search for classes..."
+            autoFocus
           />
-          <button className="mt-3 sm:mt-0 sm:ml-4 bg-btn p-3 w-[40%] hover:text-white text-white rounded-lg hover:bg-primary cursor-pointer sm:w-auto px-6 ">
-            Search
-          </button>
         </div>
 
         {/* Table */}
