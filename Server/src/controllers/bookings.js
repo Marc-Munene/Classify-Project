@@ -32,3 +32,27 @@ export const addBookings = async (req, res) => {
     });
   }
 };
+
+// adding bookings
+export const getBookings = async (req, res) => {
+  try {
+    const bookings = await Booking.find().populate("classId");
+
+    if (!bookings) {
+      return res.status(409).json({
+        message: "No bookings from database",
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      data: bookings,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      success: false,
+      message: "Faled to get Bookings!",
+    });
+  }
+};
