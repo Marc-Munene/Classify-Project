@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { Modal } from "../../components/Modal";
-import { FormModal } from "../../components/FormModal";
 import { useClassStore } from "../../store/ClassStore";
+import { BookingForm } from "../../Forms/BookingForm";
 
 const Classes = () => {
   const [modal, setModal] = useState(false);
@@ -14,7 +14,7 @@ const Classes = () => {
     classData();
   }, []);
 
-  console.log(classes);
+  // console.log(classes);
 
   const closeModal = () => {
     setModal(false);
@@ -90,7 +90,7 @@ const Classes = () => {
         </div>
       </div>
       <Modal openModal={modal} closeModal={closeModal}>
-        <FormModal />
+        <BookingForm />
       </Modal>
     </>
   );
