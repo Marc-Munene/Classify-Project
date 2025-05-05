@@ -2,7 +2,7 @@ import { Booking } from "../database/models/bookings.js";
 
 export const addBookings = async (req, res) => {
   try {
-    const { userId, classId, unit, timeStart, timeEnd } = req.body;
+    const { userId, buildingId, classId, unit, timeStart, timeEnd } = req.body;
 
     // Validate input
     if (!userId || !classId || !unit || !timeStart || !timeEnd) {
@@ -12,6 +12,7 @@ export const addBookings = async (req, res) => {
     // Create a new booking
     const newBooking = await Booking.create({
       userId,
+      buildingId,
       classId,
       unit,
       timeStart,
@@ -36,7 +37,7 @@ export const addBookings = async (req, res) => {
 // adding bookings
 export const getBookings = async (req, res) => {
   try {
-    const bookings = await Booking.find().populate("classId");
+    const bookings = await Booking.find().populate("classId buildingId");
 
     if (!bookings) {
       return res.status(409).json({
